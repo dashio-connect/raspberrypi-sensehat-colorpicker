@@ -102,7 +102,7 @@ class TestColorPicker:
         self.shutdown = False
         args = self.parse_commandline_arguments()
         self.init_logging(args.logfilename, args.verbose)
-
+        self.sense = SenseHat()
         ini_file = args.inifilename
         config_file_parser = configparser.ConfigParser()
         config_file_parser.defaults()
